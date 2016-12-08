@@ -7,6 +7,12 @@ uk:
         restrict_dependent_destroy:
           has_one: 'Неможливо видалити запис, так як існує залежність: %{record}'
           has_many: 'Неможливо видалити запис, так як існують залежності: %{record}'
+        too_long: "%{count} символів максимально допустиме"
+      models:
+        user:
+          attributes:
+            username:
+              invalid: "тільки букви, цифри і знак _"
   date:
     abbr_day_names:
     - нд.
